@@ -663,6 +663,18 @@ table{
     border-radius: 6px;
 }
 
+.viewroundrobin .personallink{
+    display: block;
+    color: #66ffff;
+    text-decoration: none;
+    position: sticky;
+    left: 365px;
+    margin-top: -45px;
+}
+.viewroundrobin .personallink:hover{
+    text-decoration: underline;
+}
+
 
 .footage{
     display: flex;
