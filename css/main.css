@@ -1,0 +1,1090 @@
+/* 
+-- Blue:
+#084A6B
+#39739C
+#63A5BD
+#c7dcea
+-- Purple:
+#7B0042
+#CE4AA5
+#E76BB5
+-- Yellow
+#FFC608
+#FFF752 
+*/
+
+*{
+    box-sizing: border-box;
+    font-family: Verdana,sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* body {
+    background-color: #242222;
+    color: white;
+} */
+
+select, input[type="checkbox"], input[type="submit"]{
+    cursor: pointer;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.type{
+    font-size: 13px;
+    text-align: center;
+    min-width: 50px;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.typeNormal{
+    background-color: #C5C0B4;
+}
+.typeGrass{
+    background-color: #87C553;
+}
+.typeFire{
+    background-color: #EC4512;
+}
+.typeWater{
+    background-color: #3194F2;
+}
+.typeElectric{
+    background-color: #F9BA19;
+}
+.typeFlying{
+    background-color: #94A5F3;
+}
+.typeBug{
+    background-color: #A5B81E;
+}
+.typePoison{
+    background-color: #954997;
+    color: white;
+}
+.typeGround{
+    background-color: #D3B45B;
+}
+.typeRock{
+    background-color: #9D873A;
+}
+.typeFighting{
+    background-color: #80321D;
+}
+.typePsychic{
+    background-color: #EA487F;
+}
+.typeGhost{
+    background-color: #5E5EB0;
+}
+.typeIce{
+    background-color: #A6E7FF;
+}
+.typeDragon{
+    background-color: #735EE2;
+    color: white;
+}
+.typeDark{
+    background-color: #523E2E;
+    color: white;
+}
+.typeSteel{
+    background-color: #B5B5C3;
+}
+.typeQuestionmark{
+    background-color: #809355;
+}
+.typeFairy{
+    background-color: #E6A4E4;
+    color: white;
+}
+
+.insertteam{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10vw;
+    gap: 20px;
+}
+
+.insertteam .insertteam-head{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 34px;
+    gap: 15px;
+}
+
+.insertteam .insertteam-head .insertteam-head-element{
+    display: flex;
+    gap: 10px;
+}
+
+.insertteam .insertteam-head .insertteam-head-element label{
+    min-width: 150px;
+}
+
+.insertteam .insertteam-head .insertteam-head-element input, .insertteam .insertteam-head .insertteam-head-element select{
+    font-size: 34px;
+    font-size: 24px;
+}
+
+.insertteam .insertteam-team{
+    display: flex;
+    flex-direction: column;
+}
+
+.insertteam .insertteam-team label{
+    font-size: 20px;
+}
+
+.insertteam .insertteam-team textarea{
+    min-width: 300px;
+    width: 800px;
+    max-width: 1100px;
+    min-height: 400px;
+    height: 500px;
+    max-height: 3500px;
+}
+
+.insertteam .insertteam-bottom input{
+    font-size: 30px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+.createroundrobin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 10px;
+}
+
+.createroundrobin .createroundrobin-region{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    font-size: 30px;
+}
+
+.createroundrobin .createroundrobin-region .createroundrobin-trainer{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px 15px;
+    background-color: #c7dcea;
+    font-size: 18px;
+    min-width: 1850px;
+}
+
+.createroundrobin .createroundrobin-region .createroundrobin-trainer .createroundrobin-teams{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+    font-size: 10px;
+}
+
+.createroundrobin .createroundrobin-region .createroundrobin-trainer .createroundrobin-teams .createroundrobin-team{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    min-width: 915px;
+    max-width: 920px;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #63A5BD;
+}
+
+.createroundrobin-team input{
+    width: 30px;
+    height: 30px;
+}
+
+.createroundrobin-team .createroundrobin-team-middle{
+    min-width: 50px;
+    font-size: 18px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.createroundrobin-team .createroundrobin-team-right{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 5px;
+    column-gap: 8px;
+    width: 100%;
+}
+
+.createroundrobin-team .createroundrobin-team-right .createroundrobin-team-pokemon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 32.6%;
+    background-color: #c7dcea;
+    padding: 2px 2px 3px 0px;
+}
+
+.createroundrobin-team .createroundrobin-team-right .createroundrobin-team-pokemon .createroundrobin-team-pokemon-image{
+    margin-left: -10px;
+}
+
+.createroundrobin-team .createroundrobin-team-right .createroundrobin-team-pokemon .createroundrobin-team-pokemon-image img{
+    max-width: 65px;
+    max-height: 60px;
+}
+
+.createroundrobin-team .createroundrobin-team-right .createroundrobin-team-pokemon .createroundrobin-team-pokemon-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 3px;
+    left: 20px;
+    background-color: #63A5BD;
+    border-radius: 9999px;
+}
+
+.createroundrobin-team .createroundrobin-team-right .createroundrobin-team-pokemon .createroundrobin-team-pokemon-item img{
+    max-width: 25px;
+    max-height: 25px;
+}
+
+.createroundrobin-team .createroundrobin-team-right .createroundrobin-team-pokemon .createroundrobin-team-pokemon-middle{
+    width: 55px;
+    margin-right: 5px;
+    margin-left: -5px;
+}
+
+.createroundrobin-team .createroundrobin-team-right .createroundrobin-team-pokemon .createroundrobin-team-pokemon-middle .createroundrobin-team-pokemon-level{
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.createroundrobin-team .createroundrobin-team-right .createroundrobin-team-pokemon .createroundrobin-team-pokemon-middle .createroundrobin-team-pokemon-ability{
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.createroundrobin-team .createroundrobin-team-right .createroundrobin-team-pokemon .createroundrobin-team-pokemon-middle .createroundrobin-team-pokemon-nature{
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.createroundrobin-team .createroundrobin-team-right .createroundrobin-team-pokemon .createroundrobin-team-pokemon-moves .createroundrobin-team-pokemon-move{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3px;
+}
+
+.createroundrobin-team .createroundrobin-team-right .createroundrobin-team-pokemon .createroundrobin-team-pokemon-moves .createroundrobin-team-pokemon-move .move{
+    width: 68px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: right;
+}
+
+.createroundrobin-team .createroundrobin-team-right .createroundrobin-team-pokemon .createroundrobin-team-pokemon-moves .createroundrobin-team-pokemon-move .type{
+    font-size: 10px;
+}
+
+.createroundrobin-team .createroundrobin-team-right .createroundrobin-team-pokemon .createroundrobin-team-pokemon-moves .createroundrobin-team-pokemon-no-move{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(123, 0, 66, 0.4);
+    color: white;
+    border-radius: 8px;
+    min-height: 15px;
+}
+
+.createroundrobin-team .createroundrobin-team-right .createroundrobin-team-pokemon .createroundrobin-team-pokemon-stats{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.createroundrobin-team .createroundrobin-team-right .createroundrobin-team-pokemon .createroundrobin-team-pokemon-IVs,
+.createroundrobin-team .createroundrobin-team-right .createroundrobin-team-pokemon .createroundrobin-team-pokemon-EVs{
+    background-color: #63A5BD;
+    border-radius: 999px;
+    aspect-ratio: 1.1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    font-size: 9px;
+    color: white;
+}
+
+.createroundrobin-team .createroundrobin-team-right .createroundrobin-team-pokemon .createroundrobin-team-pokemon-IVs__changed,
+.createroundrobin-team .createroundrobin-team-right .createroundrobin-team-pokemon .createroundrobin-team-pokemon-EVs__changed{
+    background-color: #7B0042;
+}
+
+.createroundrobin .createroundrobin-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.createroundrobin .createroundrobin-form label{
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.createroundrobin .createroundrobin-form input {
+    font-size: 30px;
+}
+
+.createroundrobin .createroundrobin-form input[type="number"] {
+    width: 120px;
+}
+
+.createroundrobin .createroundrobin-form input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+}
+
+.createroundrobin .createroundrobin-form input[type="submit"] {
+    padding: 3px 10px;
+}
+
+
+.coderoundrobin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.coderoundrobin .coderoundrobin-fields{
+    display: flex;
+    gap: 40px;
+    margin-top: 10px;
+}
+
+.coderoundrobin .coderoundrobin-fields .coderoundrobin-field{
+    display: flex;
+    flex-direction: column;
+}
+
+.coderoundrobin .coderoundrobin-fields .coderoundrobin-field label{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.coderoundrobin .coderoundrobin-fields .coderoundrobin-field textarea{
+    min-width: 400px;
+    width: 550px;
+    max-width: 700px;
+    min-height: 500px;
+    height: 710px;
+    max-height: 810px;
+}
+
+
+.insertroundrobinresults{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.insertroundrobinresults textarea{
+    min-width: 500px;
+    width: 700px;
+    max-width: 1400px;
+    min-height: 500px;
+    height: 710px;
+    max-height: 810px;
+    padding: 3px;
+}
+
+.insertroundrobinresults input[type="submit"]{
+    font-size: 30px;
+    padding: 5px 20px;
+}
+
+
+.viewroundrobin{
+    background-color: #242222;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.viewroundrobin .viewroundrobin-table{
+    overflow: auto;
+    position: relative;
+    width: 99vw;
+    height: 98vh;
+    margin: 0px auto;
+    padding-right: 76vw;
+    padding-bottom: 68vh;
+}
+/* .viewroundrobin .viewroundrobin-table::-webkit-scrollbar {
+    display: none;
+} */
+
+.viewroundrobin .viewroundrobin-table table thead th:first-child{
+    position: sticky;
+    left: 0;
+    width: 43px;
+    min-width: 43px;
+    z-index: 12;
+}
+.viewroundrobin .viewroundrobin-table table tbody td:first-child{
+    position: sticky;
+    left: 0;
+    width: 43px;
+    min-width: 43px;
+    z-index: 2;
+}
+
+.viewroundrobin .viewroundrobin-table table thead th:nth-child(2){
+    position: sticky;
+    left: 43px;
+    width: 70px;
+    min-width: 70px;
+    z-index: 13;
+}
+.viewroundrobin .viewroundrobin-table table tbody td:nth-child(2){
+    position: sticky;
+    left: 43px;
+    width: 70px;
+    min-width: 70px;
+    z-index: 3;
+}
+
+.viewroundrobin .viewroundrobin-table table thead th:nth-child(3){
+    position: sticky;
+    left: 113px;
+    z-index: 14;
+}
+.viewroundrobin .viewroundrobin-table table tbody td:nth-child(3){
+    position: sticky;
+    left: 113px;
+    z-index: 4;
+    width: 105px;
+    min-width: 105px;
+    max-width: 105px;
+}
+
+.viewroundrobin .viewroundrobin-table table tbody td:nth-child(4){
+    position: sticky;
+    left: 218px;
+    z-index: 5;
+    width: 110px;
+    min-width: 110px;
+    max-width: 110px;
+}
+
+.viewroundrobin .viewroundrobin-table table tbody td:nth-child(5){
+    position: sticky;
+    left: 328px;
+    z-index: 6;
+    border-right: 0px;
+}
+
+.viewroundrobin .viewroundrobin-table table tbody td:nth-child(5) img{
+    border-right: 1px solid black;
+}
+
+.viewroundrobin .viewroundrobin-table table tbody td:nth-child(6){
+    border-left: 0px;
+}
+
+.viewroundrobin .viewroundrobin-table table thead th,
+.viewroundrobin .viewroundrobin-table table tbody td{
+    border: 1px solid black;
+    text-align: center;
+}
+.viewroundrobin .viewroundrobin-table table tbody tr:nth-child(1) td{
+    border-top: 0px;
+}
+
+.viewroundrobin .viewroundrobin-table table thead th{
+    position: sticky;
+    top: 0;
+    padding: 3px 12px;
+    background-color: #3a5795;
+    color: white;
+}
+
+.viewroundrobin .viewroundrobin-table table tbody td{
+    color: white;
+    background-color: #423e3e;
+    max-height: 45px;
+}
+
+.viewroundrobin .viewroundrobin-table .viewroundrobin-table-trainervertical{
+    writing-mode: vertical-rl;
+    font-size: 12px;
+    padding: 3px 0px 0px;
+    border-bottom: 0px;
+}
+
+.viewroundrobin .viewroundrobin-table .viewroundrobin-table-trainervertical span{
+    height: 50px;
+    display: inline-block;
+    line-height: 1.2;
+    padding-bottom: 3px;
+    white-space: nowrap;
+}
+
+.viewroundrobin .viewroundrobin-table .viewroundrobin-table-trainervertical img{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: #423e3e;
+}
+
+.viewroundrobin .viewroundrobin-table .viewroundrobin-table-teamname{
+    font-size: 10px;
+    margin-bottom: 4px;
+}
+
+.viewroundrobin .viewroundrobin-table .viewroundrobin-table-teammember{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.viewroundrobin .viewroundrobin-table .viewroundrobin-table-teampokemon{
+    display: inline-block;
+}
+
+.viewroundrobin .viewroundrobin-table .viewroundrobin-table-teampokemon img{
+    min-width: 14px;
+    width: 14px;
+    max-width: 14px;
+    min-height: 14px;
+    height: 14px;
+    max-height: 14px;
+}
+
+.viewroundrobin .viewroundrobin-table .viewroundrobin-table-trainername span{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    font-size: 12px;
+}
+
+.viewroundrobin .viewroundrobin-table .viewroundrobin-table-profile img{
+    display: block;
+}
+
+.viewroundrobin .viewroundrobin-table .viewroundrobin-table-matchup{
+    text-align: center;
+}
+
+.viewroundrobin .viewroundrobin-table .viewroundrobin-table-matchup--complete{
+    background-color: rgba(46, 204, 113, 0.8);
+}
+
+.viewroundrobin .viewroundrobin-table .viewroundrobin-table-matchup--high{
+    background-color: rgba(46, 204, 113, 0.7);
+}
+
+.viewroundrobin .viewroundrobin-table .viewroundrobin-table-matchup--good{
+    background-color: rgba(40, 167, 69, 0.6);
+}
+
+.viewroundrobin .viewroundrobin-table .viewroundrobin-table-matchup--somewhat{
+    background-color: rgba(40, 167, 69, 0.5);
+}
+
+.viewroundrobin .viewroundrobin-table .viewroundrobin-table-matchup--tied{
+    background-color: rgba(255, 193, 7, 0.5);
+}
+
+.viewroundrobin .viewroundrobin-table .viewroundrobin-table-matchup--lost{
+    background-color: rgba(253, 66, 10, 0.6);
+}
+
+.viewroundrobin .viewroundrobin-table .viewroundrobin-table-matchup--destroyed{
+    background-color: rgba(220, 53, 69, 0.6);
+}
+
+.viewroundrobin .viewroundrobin-table .viewroundrobin-table-matchup--annihilated{
+    background-color: rgba(220, 53, 69, 0.5);
+}
+
+.viewroundrobin .viewroundrobin-table .viewroundrobin-table-matchup--killed{
+    background-color: rgba(179, 0, 0, 0.8);
+}
+
+.viewroundrobin .subscribelink{
+    position: sticky;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    left: 30px;
+    width: 290px;
+    background-color: #FF0033;
+    padding: 5px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+.viewroundrobin .subscribelink:hover{
+    background-color: #ff335c;
+    box-shadow: 0px 0px 10px black;
+}
+
+.viewroundrobin .subscribelink span{
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    line-height: 1;
+    padding: 10px 5px;
+    border-radius: 6px;
+}
+
+
+.footage{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #0D1F2D;
+    padding-right: 50vw;
+    padding: 15px 50vw 15px 10px;
+    overflow: scroll;
+
+    -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.footage::-webkit-scrollbar {
+    display: none;
+}
+
+.footage, .footage *{
+    transition: all 0.4s ease-in-out;
+}
+
+.footage .trainer{
+    display: flex;
+    align-items: center;
+    background-color: #1E3A5F;
+    color: #64C8FF;
+    width: 100%;
+    border: 4px solid #64C8FF;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(100, 200, 255, 0.7);
+    padding: 5px 5px;
+    overflow: hidden;
+}
+
+.footage .trainer .trainer-stats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 135px;
+    color: white;
+    text-align: center;
+}
+
+.footage .trainer .trainer-stats .trainer-placement{
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.footage .trainer .trainer-stats .trainer-placement1{
+    font-size: 56px;
+}
+.footage .trainer .trainer-stats .trainer-placement2{
+    font-size: 50px;
+}
+.footage .trainer .trainer-stats .trainer-placement3{
+    font-size: 44px;
+}
+
+.footage .trainer .trainer-stats .trainer-placement img{
+    height: 66px;
+}
+
+.footage .trainer .trainer-stats .trainer-wins{
+    font-size: 20px;
+}
+.footage .trainer .trainer-stats .trainer-wins label{
+    font-size: 14px;
+    margin-top: -4px;
+    display: block;
+}
+
+.footage .trainer .trainer-stats .trainer-losses{
+    font-size: 19px;
+    margin-top: 6px;
+}
+.footage .trainer .trainer-stats .trainer-losses label{
+    font-size: 13px;
+    margin-top: -4px;
+    display: block;
+}
+
+.footage .trainer .trainer-stats-2{
+    color: white;
+    font-size: 0px;
+    text-align: center;
+    width: 0px;
+}
+.footage .trainer .trainer-stats-2 label{
+    font-size: 0px;
+    display: block;
+}
+
+.footage .trainer .trainer-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 15px;
+    text-align: center;
+    width: 130px;
+}
+
+.footage .trainer .trainer-profile .trainer-image{
+    border: 2px solid #64C8FF;
+    box-shadow: 0 0 15px rgba(100, 200, 255, 0.7);
+    height: 100px;
+    width: 100px;
+}
+
+.footage .trainer .trainer-profile .trainer-title{
+    margin-top: 10px;
+    font-size: 12px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-word;
+    text-overflow: ellipsis;
+}
+
+.footage .trainer .trainer-profile .trainer-name{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footage .trainer .trainer-pokemons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5px;
+    width: 650px
+}
+
+.footage .trainer .trainer-pokemon-level{
+    color: white;
+    position: absolute;
+    left: 2px;
+    top: 87px;
+    font-size: 10px;
+}
+
+.footage .trainer .trainer-pokemon-name{
+    border-top: 2px solid #64C8FF;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    padding: 0px 3px;
+    overflow: hidden;
+}
+
+.footage .trainer .trainer-pokemon-ability{
+    border-bottom: 1px solid #64C8FF;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    padding: 0px 5px 1px;
+    overflow: hidden;
+}
+
+.footage .trainer .trainer-pokemons .trainer-nopokemon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 104px;
+    height: 190px;
+    background-color: transparent;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.footage .trainer .trainer-pokemons .trainer-nopokemon-content{
+    display: block;
+    background-color: rgba(100, 200, 255, 0.1);
+    height: 75px;
+    width: 75px;
+    border-radius: 9999px;
+}
+
+.footage .trainer .trainer-pokemons .trainer-pokemon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 104px;
+    font-size: 11px;
+    border: 2px solid #64C8FF;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(100, 200, 255, 0.7);
+    background-color: #1E3A5F;
+    position: relative;
+    overflow: hidden;
+}
+
+.footage .trainer .trainer-pokemons .trainer-pokemon .trainer-pokemon-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    background-color: rgba(100, 200, 255, 0.2);
+    height: 100px;
+    overflow: hidden;
+}
+
+.footage .trainer .trainer-pokemons .trainer-pokemon .trainer-pokemon-image img{
+    max-width: 96px;
+    max-height: 96px;
+}
+
+.footage .trainer .trainer-pokemons .trainer-pokemon .trainer-pokemon-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(100, 200, 255, 0.6);
+    border-radius: 9999px;
+    right: 4px;
+    top: 66px;
+    box-shadow: 0px 0px 5px 1px #1E3A5F;
+}
+
+.footage .trainer .trainer-pokemons .trainer-pokemon .trainer-pokemon-item img{
+    width: 30px;
+    height: 30px;
+}
+
+.footage .trainer .trainer-pokemons .trainer-pokemon .trainer-pokemon-moves{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 11px;
+}
+
+.footage .trainer .trainer-pokemons .trainer-pokemon .trainer-pokemon-moves .trainer-pokemon-move{
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.footage .trainer__open{
+    margin-top: 3px;
+    margin-bottom: 3px;
+    background-color: #2b5388;
+}
+
+.footage .trainer__closed .trainer-wins{
+    font-size: 0px !important;
+}
+.footage .trainer__closed .trainer-wins label{
+    font-size: 0px !important;
+}
+.footage .trainer__closed .trainer-losses{
+    font-size: 0px !important;
+}
+.footage .trainer__closed .trainer-losses label{
+    font-size: 0px !important;
+}
+.footage .trainer__closed .trainer-name{
+    font-size: 0px !important;
+}
+.footage .trainer__closed .trainer-title{
+    font-size: 0px !important;
+    margin-top: 0px !important;
+}
+.footage .trainer__closed .trainer-pokemon-item{
+    opacity: 0;
+    top: 25px !important;
+}
+.footage .trainer__closed .trainer-pokemon-name{
+    font-size: 0px !important;
+    border-width: 0px !important;
+}
+.footage .trainer__closed .trainer-pokemon-level{
+    opacity: 0;
+    top: 25px !important;
+}
+.footage .trainer__closed .trainer-pokemon-ability{
+    font-size: 0px !important;
+    border-width: 0px !important;
+}
+.footage .trainer__closed .trainer-pokemon-move{
+    font-size: 0px !important;
+}
+.footage .trainer__closed .trainer-nopokemon{
+    height: 62px !important;
+}
+.footage .trainer__closed .trainer-nopokemon-content{
+    height: 0px !important;
+    width: 0px !important;
+}
+
+.footage .trainer__closed {
+    border-width: 2px;
+}
+
+.footage .trainer__closed .trainer-stats{
+    width: 115px;
+}
+
+.footage .trainer__closed .trainer-stats-2{
+    font-size: 20px;
+    width: 87px;
+}
+.footage .trainer__closed .trainer-stats-2 label{
+    font-size: 14px;
+    margin-top: -4px;
+}
+
+.footage .trainer__closed .trainer-stats .trainer-placement{
+    margin: 0px;
+}
+.footage .trainer__closed .trainer-stats .trainer-placement1{
+    font-size: 44px;
+}
+.footage .trainer__closed .trainer-stats .trainer-placement2{
+    font-size: 42px;
+}
+.footage .trainer__closed .trainer-stats .trainer-placement3{
+    font-size: 32px;
+}
+
+.footage .trainer__closed .trainer-stats .trainer-placement img{
+    margin-top: -10px;
+    margin-bottom: -20px;
+}
+
+.footage .trainer__closed .trainer-profile{
+    width: 70px;
+}
+
+.footage .trainer__closed .trainer-profile .trainer-image{
+    height: 60px;
+    width: 60px;
+    border-width: 1px;
+}
+
+.footage .trainer__closed .trainer-pokemons .trainer-pokemon{
+    border-width: 1px;
+}
+
+.footage .trainer__closed .trainer-pokemons .trainer-pokemon .trainer-pokemon-image{
+    height: 60px;
+}
+
+
+
+.footage .trainer__hidden {
+    border: 2px solid #0085cc;
+    background-color: #303e50;
+}
+.footage .trainer__hidden .trainer-stats{
+    width: 65px !important;
+}
+.footage .trainer__hidden .trainer-placement{
+    margin: 0px !important;
+    font-size: 18px !important;
+}
+.footage .trainer__hidden .trainer-placement img{
+    height: 28px !important;
+    margin-bottom: -7px !important;
+    margin-top: -3px !important;
+}
+.footage .trainer__hidden .trainer-wins{
+    font-size: 0px !important;
+}
+.footage .trainer__hidden .trainer-wins label{
+    font-size: 0px !important;
+}
+.footage .trainer__hidden .trainer-losses{
+    font-size: 0px !important;
+    margin: 0px 0px 1px !important;
+}
+.footage .trainer__hidden .trainer-losses label{
+    font-size: 0px !important;
+}
+.footage .trainer__hidden .trainer-stats-2{
+    font-size: 0px !important;
+}
+.footage .trainer__hidden .trainer-profile .trainer-image{
+    height: 0px !important;
+    width: 0px !important;
+    border-width: 0px !important;
+}
+.footage .trainer__hidden .trainer-title{
+    font-size: 0px !important;
+}
+.footage .trainer__hidden .trainer-name{
+    font-size: 0px !important;
+}
+.footage .trainer__hidden .trainer-pokemon{
+    height: 0px !important;
+    border-width: 0px !important;
+}
+.footage .trainer__hidden .trainer-pokemon-image{
+    height: 0px !important;
+}
+.footage .trainer__hidden .trainer-pokemon-item{
+    top: 10px !important;
+    opacity: 0;
+}
+.footage .trainer__hidden .trainer-pokemon-name{
+    font-size: 0px !important;
+}
+.footage .trainer__hidden .trainer-pokemon-level{
+    top: 10px !important;
+    opacity: 0;
+}
+.footage .trainer__hidden .trainer-pokemon-ability{
+    font-size: 0px !important;
+}
+.footage .trainer__hidden .trainer-pokemon-move{
+    font-size: 0px !important;
+}
+.footage .trainer__hidden .trainer-nopokemon{
+    height: 10px !important;
+}
+.footage .trainer__hidden .trainer-nopokemon-content{
+    height: 0px !important;
+    width: 0px !important;
+}
